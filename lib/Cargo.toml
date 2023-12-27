@@ -1,0 +1,20 @@
+[package]
+name = "lib"
+version = "0.1.0"
+edition = "2021"
+build = "src/build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytes = "*"
+prost = "*"
+serde_json = "*"
+serde = { version = "*", features = ["derive"] }
+types = { path = "../types" }
+
+[build-dependencies]
+prost-build = { version = "*" }
+
+[lib]
+crate-type = ["dylib"]

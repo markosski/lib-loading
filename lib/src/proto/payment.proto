@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package events.auth;
+
+message Payment {
+    int32 amount = 1;
+    int32 time = 2;
+    string channel = 3;
+}
